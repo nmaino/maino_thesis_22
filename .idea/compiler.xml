@@ -9,5 +9,8 @@
         <module name="maino_thesis_22" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="rum" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>
