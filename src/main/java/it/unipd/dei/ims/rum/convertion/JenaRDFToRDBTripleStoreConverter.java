@@ -11,8 +11,11 @@ import java.io.FileNotFoundException;
 /**
  * This class is a prototype of a substituting class for
  * @link{RDFToRDBTripleStoreConverter} originally developed
- * by Dennis Dosso utilising Blazegraph.
+ * by Dennis Dosso by utilising Blazegraph.
  * This class makes use of Jena instead.
+ *
+ * Please make use of @see{URI_fixer.py} to fix illegal
+ * URIs in the input RDF file.
  *
  * @author Nicola Maino
  */
@@ -40,7 +43,8 @@ public class JenaRDFToRDBTripleStoreConverter {
 
         // Creates a Jena default graph model and reads data from the file
         Model model = dataset.getDefaultModel();
-        model.read(fin, null, "N3");
+
+        model.read(fin, null, "NT");
 
         // Commits and closes
         dataset.commit();
@@ -50,8 +54,8 @@ public class JenaRDFToRDBTripleStoreConverter {
     public static void main(String args[]) throws FileNotFoundException {
 
 
-        String filePath = "/Users/Nicola Maino/Documents/RDF_DATASETS/linkedmdb_1m/prova.n3";
-        String rdfDataset = "/Users/Nicola Maino/Documents/RDF_DATASETS/linkedmdb_1m/prova";
+        String filePath = "/Users/Nicola Maino/Documents/RDF_DATASETS/linkedmdb_1m/linkedmdb_1m.nt";
+        String rdfDataset = "/Users/Nicola Maino/Documents/RDF_DATASETS/linkedmdb_1m/dump";
 
         JenaRDFToRDBTripleStoreConverter converter = new JenaRDFToRDBTripleStoreConverter();
 
