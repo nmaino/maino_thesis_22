@@ -9,7 +9,7 @@
 # The fixing is obtained by substituting the illegal characters with their hexadecimal
 # equivalent value. eg: ' " ' is substituted with ' %22 '
 #
-# Please execute by using "python3 linkedmdb_1m_converter.py"
+# Please execute by using "python3 URI_fixer.py"
 #
 # NOTE: Execution time could be unfeasible for fixing all the
 # illegal character set, especially on large files.
