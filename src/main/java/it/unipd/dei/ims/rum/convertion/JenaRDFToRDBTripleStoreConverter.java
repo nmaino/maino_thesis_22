@@ -44,6 +44,36 @@ public class JenaRDFToRDBTripleStoreConverter {
         // Creates a Jena default graph model and reads data from the file
         Model model = dataset.getDefaultModel();
 
+        model.read(fin, null, "N3");
+
+        // Commits and closes
+        dataset.commit();
+        dataset.end();
+    }
+
+    public void importFromNTToDiskDataset(String n3FilePath, String outputDatasetPath)
+            throws FileNotFoundException {
+
+        // To read the file as a stream
+        FileInputStream fin;
+
+        // Opens file and handles exceptions
+        try {
+            fin = new FileInputStream(n3FilePath);
+        } catch (FileNotFoundException e) {
+            throw new FileNotFoundException("Cannot open the provided file.\n");
+        }
+
+        // Creates a Dataset instance
+        Dataset dataset =
+                TDBFactory.createDataset(outputDatasetPath);
+
+        // Sets dataset on write mode
+        dataset.begin(ReadWrite.WRITE);
+
+        // Creates a Jena default graph model and reads data from the file
+        Model model = dataset.getDefaultModel();
+
         model.read(fin, null, "NT");
 
         // Commits and closes
@@ -51,8 +81,37 @@ public class JenaRDFToRDBTripleStoreConverter {
         dataset.end();
     }
 
-    public static void main(String args[]) throws FileNotFoundException {
+    public void importFromTTLToDiskDataset(String n3FilePath, String outputDatasetPath)
+            throws FileNotFoundException {
 
+        // To read the file as a stream
+        FileInputStream fin;
+
+        // Opens file and handles exceptions
+        try {
+            fin = new FileInputStream(n3FilePath);
+        } catch (FileNotFoundException e) {
+            throw new FileNotFoundException("Cannot open the provided file.\n");
+        }
+
+        // Creates a Dataset instance
+        Dataset dataset =
+                TDBFactory.createDataset(outputDatasetPath);
+
+        // Sets dataset on write mode
+        dataset.begin(ReadWrite.WRITE);
+
+        // Creates a Jena default graph model and reads data from the file
+        Model model = dataset.getDefaultModel();
+
+        model.read(fin, null, "TURTLE");
+
+        // Commits and closes
+        dataset.commit();
+        dataset.end();
+    }
+
+    public static void main(String args[]) throws FileNotFoundException {
 
         String filePath = "/Users/Nicola Maino/Documents/RDF_DATASETS/linkedmdb_1m/linkedmdb_1m.nt";
         String rdfDataset = "/Users/Nicola Maino/Documents/RDF_DATASETS/linkedmdb_1m/dump";
