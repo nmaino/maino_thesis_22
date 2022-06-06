@@ -1,4 +1,4 @@
-/** @author{Dennis_Dosso} */
+/** @author Dennis Dosso */
 
 package it.unipd.dei.ims.rum.utilities;
 

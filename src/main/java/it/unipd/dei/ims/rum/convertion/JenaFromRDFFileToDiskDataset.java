@@ -10,16 +10,17 @@ import java.io.FileNotFoundException;
 
 /**
  * This class is a prototype of a substituting class for
- * @link{RDFToRDBTripleStoreConverter} originally developed
+ * @see{FromRDFFileToDiskTripleStoreImporter.java} originally developed
  * by Dennis Dosso by utilising Blazegraph.
  * This class makes use of Jena instead.
  *
  * Please make use of @see{URI_fixer.py} to fix illegal
  * URIs in the input RDF file.
  *
+ * @throws{FileNotFoundException}
  * @author Nicola Maino
  */
-public class JenaRDFToRDBTripleStoreConverter {
+public class JenaFromRDFFileToDiskDataset {
 
     public void importFromN3ToDiskDataset(String n3FilePath, String outputDatasetPath)
             throws FileNotFoundException {
@@ -114,11 +115,12 @@ public class JenaRDFToRDBTripleStoreConverter {
     public static void main(String args[]) throws FileNotFoundException {
 
         String filePath = "/Users/Nicola Maino/Documents/RDF_DATASETS/linkedmdb_1m/linkedmdb_1m.nt";
-        String rdfDataset = "/Users/Nicola Maino/Documents/RDF_DATASETS/linkedmdb_1m/dump";
+        String rdfDataset = "/Users/Nicola Maino/Documents/RDF_DATASETS/linkedmdb_1m/";
 
-        JenaRDFToRDBTripleStoreConverter converter = new JenaRDFToRDBTripleStoreConverter();
+        JenaFromRDFFileToDiskDataset converter =
+                new JenaFromRDFFileToDiskDataset();
 
-        converter.importFromN3ToDiskDataset(filePath, rdfDataset);
+        converter.importFromNTToDiskDataset(filePath, rdfDataset);
 
         System.out.println("RDF Dataset created.\n");
     }
