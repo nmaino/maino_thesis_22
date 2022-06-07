@@ -18,6 +18,11 @@
             <artifactId>jena-tdb</artifactId>
             <version>3.13.1</version>
         </dependency>
+        <dependency>
+            <groupId>commons-validator</groupId>
+            <artifactId>commons-validator</artifactId>
+            <version>1.6</version>
+        </dependency>
 
     </dependencies>
 
