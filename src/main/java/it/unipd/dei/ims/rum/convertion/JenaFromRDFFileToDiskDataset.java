@@ -114,8 +114,8 @@ public class JenaFromRDFFileToDiskDataset {
 
     public static void main(String args[]) throws FileNotFoundException {
 
-        String filePath = "/Users/Nicola Maino/Documents/RDF_DATASETS/linkedmdb_1m/linkedmdb_1m.nt";
-        String rdfDataset = "/Users/Nicola Maino/Documents/RDF_DATASETS/linkedmdb_1m/";
+        String filePath = "/Users/Nicola Maino/Documents/RDF_DATASETS/linkedmdb-latest-dump/linkedmdb-latest-dump-purified.nt";
+        String rdfDataset = "/Users/Nicola Maino/Documents/RDF_DATASETS/linkedmdb-latest-dump/purified";
 
         JenaFromRDFFileToDiskDataset converter =
                 new JenaFromRDFFileToDiskDataset();

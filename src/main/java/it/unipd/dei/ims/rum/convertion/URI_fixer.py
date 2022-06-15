@@ -25,9 +25,9 @@ import re
 FIXING_REGEX = r'["{}`]' # Use r'[<>"{}|^`\\]' for full conversion instead
 
 # Script dirs
-file_path = "C:\\Users\\Nicola Maino\\Documents\\RDF_DATASETS\\linkedmdb_1m\\"
-file_input_name = "dump.nt"
-file_output_name = "linkedmdb_1m.nt"
+file_path = "C:\\Users\\Nicola Maino\\Documents\\RDF_DATASETS\\linkedmdb-latest-dump\\"
+file_input_name = "linkedmdb-latest-dump.nt"
+file_output_name = "linkedmdb-latest-dump-purified.nt"
 
 # Opens the input file
 fin = open(file_path + file_input_name, "rt")
