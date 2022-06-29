@@ -59,10 +59,10 @@ public class ConnectionHandler {
      * @param o the name of the class. Every class should use its name to keep track of which class
      * is the original owner of the connection and has the right to open/close the connection.
      * */
-    public static Connection createConnectionAsOwner(String jdbcConnectionString, String o) throws SQLException {
+    public static Connection createConnectionAsOwner(String jdbcConnectionString, String username, String password, String o) throws SQLException {
         if(connection == null || connection.isClosed()) {
             if(owner == null || o.equals(owner)) {
-                connection = DriverManager.getConnection(jdbcConnectionString);
+                connection = DriverManager.getConnection(jdbcConnectionString, username, password);
                 connectionSet = true;
                 owner = o;
             }

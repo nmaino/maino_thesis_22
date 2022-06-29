@@ -190,7 +190,7 @@ public class StatisticsComputationPhase {
 
         //open RDB connection
         try {
-            connection = ConnectionHandler.createConnectionAsOwner(jdbcConnectionString, this.getClass().getName());
+            connection = ConnectionHandler.createConnectionAsOwner(jdbcConnectionString, username, password, this.getClass().getName());
 
             Statement st = connection.createStatement();
             System.out.println("deleting all statistics data...");
