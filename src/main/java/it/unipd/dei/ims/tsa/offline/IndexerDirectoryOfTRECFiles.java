@@ -31,6 +31,7 @@ public class IndexerDirectoryOfTRECFiles {
 
 	private String terrierHome;
 	private String terrierEtc;
+	private String terrierVar;
 
 	public IndexerDirectoryOfTRECFiles() {
 
@@ -63,10 +64,13 @@ public class IndexerDirectoryOfTRECFiles {
 
 		this.terrierHome = map.get("terrier.home");
 		this.terrierEtc = map.get("terrier.etc");
+		this.terrierVar = map.get("terrier.var");
 		//set the needed properties
 		
 		System.setProperty("terrier.home", terrierHome);
 		System.setProperty("terrier.etc", terrierEtc);
+		System.setProperty("terrier.var", terrierVar);
+
 	}
 
 	/** Executes the TREC documents contained in the 
@@ -76,7 +80,7 @@ public class IndexerDirectoryOfTRECFiles {
 	 * if you want an index made of bigrams.
 	 * 
 	 * */
-	public void index(String flag) {
+	public void index(String flag) throws IOException {
 		//set what kind of indexing we want
 		if(flag.equals("unigram"))
 			System.setProperty("tokeniser", "EnglishTokeniser"); 
@@ -94,19 +98,26 @@ public class IndexerDirectoryOfTRECFiles {
 		//get the files that we want to index
 		List<String> files = PathUsefulMethods.getListOfFiles(directoryToIndex);
 		//indexer with the path of the directory where to index
-		BasicIndexer indexer = new BasicIndexer(indexPath, "data_1");
+		BasicIndexer indexer = new BasicIndexer(indexPath, "data");
 		Collection coll = new TRECCollection(files);
 
 		indexer.index(new Collection[]{ coll });
+		System.out.println(indexPath);
+
 		//open the new index
 		Index index = IndexOnDisk.createIndex(indexPath, "data_1");
+		System.out.println(index.toString());
+
+		//Path source = Paths.get(indexPath + "\\data_1.properties");
+		//Files.move(source, source.resolveSibling("data.properties"));
+
 		try {
 			index.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
-			//re-set the standard tokenizer 
-			System.setProperty("tokeniser", "EnglishTokeniser"); 
+			//re-set the standard tokenizer
+			System.setProperty("tokeniser", "EnglishTokeniser");
 		}
 
 		System.out.println("Index created.");
@@ -114,10 +125,10 @@ public class IndexerDirectoryOfTRECFiles {
 
 
 	/** Test main*/
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		IndexerDirectoryOfTRECFiles phase = new IndexerDirectoryOfTRECFiles();
 		
-		phase.setDirectoryToIndex("/Users/Nicola Maino/Documents/RDF_DATASETS/linkedmdb-latest-dump/algorithms/TSA/TREC");
+		phase.setDirectoryToIndex("/Users/Nicola Maino/Documents/IdeaProjects/maino_thesis_22/RDF_DATASETS/linkedmdb-latest-dump/algorithms/TSA/TREC");
 		phase.setIndexPath(".");
 		phase.index("unigram");
 	}

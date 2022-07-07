@@ -190,8 +190,7 @@ public class StatisticsComputationPhase {
 
         //open RDB connection
         try {
-            connection = ConnectionHandler.createConnectionAsOwner(jdbcConnectionString, username, password, this.getClass().getName());
-
+            connection = DriverManager.getConnection(jdbcConnectionString, username, password);
             Statement st = connection.createStatement();
             System.out.println("deleting all statistics data...");
             st.executeUpdate(SQL_TRUNCATE_TABLE_LABEL);
