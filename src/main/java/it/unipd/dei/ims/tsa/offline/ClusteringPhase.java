@@ -493,13 +493,10 @@ public class ClusteringPhase {
     /**test main*/
     public static void main(String[] args) {
         ComputeTheTopKConnectivityList phase2 = new ComputeTheTopKConnectivityList();
-        System.out.println("list initialised");
         List<String> connectivityList = phase2.getTopKConnectivityList();
-        System.out.println("list created");
 
 
         ClusteringPhase phase = new ClusteringPhase();
-        System.out.println("clustering phase initialised");
 
         phase.TSAAlgorithm(connectivityList);
     }
