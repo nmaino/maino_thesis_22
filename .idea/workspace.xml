@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b7d68729-7181-4f06-a50b-cefd8a4bd40a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../efficient-backtracking/EfficientBacktracking.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../efficient-backtracking/efficient-backtracking.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ant_ant_1_6_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_20030911.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__bcel_bcel_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__colt_colt_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_adobe_xmp_xmpcore_5_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_blazegraph_bigdata_blueprints_2_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_blazegraph_bigdata_cache_2_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_blazegraph_bigdata_cache_2_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_blazegraph_bigdata_client_2_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_blazegraph_bigdata_client_2_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_blazegraph_bigdata_common_util_2_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_blazegraph_bigdata_common_util_2_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_blazegraph_bigdata_core_2_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_blazegraph_bigdata_core_2_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_blazegraph_bigdata_ganglia_2_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_blazegraph_bigdata_ganglia_2_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_blazegraph_bigdata_gas_2_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_blazegraph_bigdata_gas_2_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_blazegraph_bigdata_statics_2_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_blazegraph_bigdata_statics_2_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_blazegraph_bigdata_util_2_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_blazegraph_bigdata_util_2_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_blazegraph_bigdata_war_html_war_2_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_blazegraph_colt_2_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_blazegraph_ctc_striterators_2_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_blazegraph_ctc_striterators_2_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_blazegraph_dsi_utils_2_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_blazegraph_dsi_utils_2_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_blazegraph_junit_ext_2_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_blazegraph_lgpl_utils_2_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_blazegraph_lgpl_utils_2_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_blazegraph_rdf_properties_2_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_blazegraph_rdf_properties_2_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_blazegraph_sparql_grammar_2_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_blazegraph_sparql_grammar_2_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_blazegraph_system_utils_2_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_blazegraph_system_utils_2_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_codahale_metrics_metrics_core_3_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_drewnoakes_metadata_extractor_2_6_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_json_org_2_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_andrewoma_dexx_collection_0_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsonld_java_jsonld_java_0_12_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsonld_java_jsonld_java_0_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsonld_java_jsonld_java_sesame_0_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_stephenc_high_scale_lib_high_scale_lib_1_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_yasserg_jforests_v0_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_1_7_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_14_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_juniversalchardet_juniversalchardet_1_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_mp4parser_isoparser_1_0_RC_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_ibm_icu_icu4j_4_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_martiansoftware_jsap_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sleepycat_je_5_0_73.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sna_projects_kamikaze_kamikaze_3_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_core_1_17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_json_1_17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_impl_2_2_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_tinkerpop_blueprints_blueprints_core_2_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_tinkerpop_rexster_rexster_core_2_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_uwyn_jhighlight_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_cli_commons_cli_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_configuration_commons_configuration_1_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_dbcp_commons_dbcp_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_digester_commons_digester_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_el_commons_el_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_httpclient_commons_httpclient_3_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_net_commons_net_1_4_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_pool_commons_pool_1_5_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_validator_commons_validator_1_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__concurrent_concurrent_1_3_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__de_l3s_boilerpipe_boilerpipe_1_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__edu_ucar_netcdf_4_2_min.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__edu_uci_ics_crawler4j_4_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__fastutil_fastutil_5_0_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__hsqldb_hsqldb_1_8_0_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__it_unimi_dsi_fastutil_6_5_16.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_stream_stax_api_1_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jdom_jdom_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jline_jline_0_9_94.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_8_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__me_lemire_integercompression_JavaFastPFOR_0_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_java_dev_jets3t_jets3t_0_7_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_jini_jini_ext_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_jopt_simple_jopt_simple_4_0_beta1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_kosmosfs_kfs_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_opencsv_opencsv_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_trove4j_trove4j_2_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_findbugs_annotations_1_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr4_runtime_4_7_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr_runtime_3_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_stringtemplate_3_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_1_8_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_apache_bcel_1_8_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_launcher_1_8_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_collections4_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_compress_1_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_csv_1_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_jexl_2_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_8_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_rng_client_api_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_rng_core_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_rng_sampling_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_rng_simple_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_text_1_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_geronimo_specs_geronimo_stax_api_1_0_spec_1_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_core_0_20_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_3_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_cache_4_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_cache_4_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpmime_4_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpmime_4_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_james_apache_mime4j_core_0_7_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_james_apache_mime4j_dom_0_7_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_jena_jena_arq_3_13_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_jena_jena_base_3_13_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_jena_jena_core_3_13_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_jena_jena_dboe_base_3_13_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_jena_jena_dboe_index_3_13_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_jena_jena_dboe_storage_3_13_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_jena_jena_dboe_trans_data_3_13_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_jena_jena_dboe_transaction_3_13_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_jena_jena_iri_3_13_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_jena_jena_rdfconnection_3_13_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_jena_jena_shacl_3_13_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_jena_jena_shaded_guava_3_13_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_jena_jena_tdb2_3_13_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_jena_jena_tdb_3_13_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_12_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_core_2_12_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_analyzers_3_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_analyzers_common_8_11_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_analyzers_smartcn_5_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_core_3_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_core_9_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_queries_9_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_queryparser_9_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_sandbox_9_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_snowball_3_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_pdfbox_fontbox_1_8_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_pdfbox_jempbox_1_8_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_pdfbox_pdfbox_1_8_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_3_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_3_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_3_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_scratchpad_3_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_thrift_libthrift_0_12_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tika_tika_core_1_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tika_tika_parsers_1_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_2_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_zookeeper_zookeeper_3_4_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjrt_1_6_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcmail_jdk15_1_45.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15_1_45.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ccil_cowan_tagsoup_tagsoup_1_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_3_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_jaxrs_1_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_asl_1_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_xc_1_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jettison_jettison_1_3_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jdt_core_3_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_apache_jsp_9_2_9_v20150224.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_client_9_2_3_v20140905.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_continuation_9_2_3_v20140905.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_http_9_2_3_v20140905.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_http_9_2_9_v20150224.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_io_9_2_3_v20140905.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_io_9_2_9_v20150224.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_jmx_9_2_3_v20140905.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_jndi_9_2_3_v20140905.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_proxy_9_2_3_v20140905.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_rewrite_9_2_3_v20140905.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_security_9_2_3_v20140905.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_server_9_2_3_v20140905.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_server_9_2_9_v20150224.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_servlet_9_2_3_v20140905.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_servlet_9_2_9_v20150224.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_9_2_3_v20140905.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_9_2_9_v20150224.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_webapp_9_2_3_v20140905.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_webapp_9_2_9_v20150224.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_xml_9_2_3_v20140905.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_xml_9_2_9_v20150224.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_orbit_org_eclipse_jdt_core_3_8_2_v20130121.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_toolchain_jetty_schemas_3_1_M0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_gagravarr_vorbis_java_core_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_gagravarr_vorbis_java_core_tests_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_gagravarr_vorbis_java_tika_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_netty_netty_3_2_2_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jgrapht_jgrapht_core_1_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jgrapht_jgrapht_io_1_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jheaps_jheaps_0_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_json_json_20090211.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jsoup_jsoup_1_7_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jasper_apache_el_8_0_9_M3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jasper_apache_jsp_8_0_9_M3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_jsp_2_1_6_1_14.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openrdf_sesame_sesame_http_client_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openrdf_sesame_sesame_http_protocol_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openrdf_sesame_sesame_model_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openrdf_sesame_sesame_query_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openrdf_sesame_sesame_queryalgebra_evaluation_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openrdf_sesame_sesame_queryalgebra_model_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openrdf_sesame_sesame_queryparser_api_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openrdf_sesame_sesame_queryparser_serql_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openrdf_sesame_sesame_queryparser_sparql_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openrdf_sesame_sesame_queryresultio_api_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openrdf_sesame_sesame_queryresultio_binary_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openrdf_sesame_sesame_queryresultio_sparqljson_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openrdf_sesame_sesame_queryresultio_sparqlxml_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openrdf_sesame_sesame_queryresultio_text_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openrdf_sesame_sesame_repository_api_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openrdf_sesame_sesame_repository_contextaware_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openrdf_sesame_sesame_repository_dataset_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openrdf_sesame_sesame_repository_event_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openrdf_sesame_sesame_repository_http_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openrdf_sesame_sesame_repository_manager_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openrdf_sesame_sesame_repository_sail_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openrdf_sesame_sesame_repository_sparql_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openrdf_sesame_sesame_rio_api_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openrdf_sesame_sesame_rio_binary_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openrdf_sesame_sesame_rio_datatypes_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openrdf_sesame_sesame_rio_languages_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openrdf_sesame_sesame_rio_n3_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openrdf_sesame_sesame_rio_nquads_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openrdf_sesame_sesame_rio_ntriples_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openrdf_sesame_sesame_rio_rdfjson_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openrdf_sesame_sesame_rio_rdfxml_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openrdf_sesame_sesame_rio_trig_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openrdf_sesame_sesame_rio_trix_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openrdf_sesame_sesame_rio_turtle_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openrdf_sesame_sesame_runtime_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openrdf_sesame_sesame_sail_api_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openrdf_sesame_sesame_sail_federation_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openrdf_sesame_sesame_sail_inferencer_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openrdf_sesame_sesame_sail_memory_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openrdf_sesame_sesame_sail_nativerdf_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openrdf_sesame_sesame_sail_rdbms_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openrdf_sesame_sesame_util_2_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_debug_all_4_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_postgresql_postgresql_42_3_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_semarglproject_semargl_core_0_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_semarglproject_semargl_rdf_0_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_semarglproject_semargl_rdfa_0_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_semarglproject_semargl_sesame_0_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_26.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_tukaani_xz_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_utgenome_thirdparty_picard_1_86_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xerial_snappy_snappy_java_1_0_5_M3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__oro_oro_2_0_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__postgresql_postgresql_9_1_901_1_jdbc4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__regexp_regexp_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__rome_rome_0_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tomcat_jasper_compiler_5_5_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tomcat_jasper_runtime_5_5_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__uk_ac_gla_dcs_terrierteam_jtreceval_0_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__uk_org_lidalia_lidalia_slf4j_ext_1_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xerces_xercesImpl_2_8_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_4_01.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xmlenc_xmlenc_0_52.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/maino_thesis_22.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../offline_rdf_clustering/offline_clustering_rdf.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../terrier-custom/share/share.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../terrier-custom/src/terrier-custom.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../terrier-custom/terrier-core.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../yosi_rdf/yosi_rdf.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../efficient-backtracking/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../efficient-backtracking/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../efficient-backtracking/src/main/java/it/unipd/dei/ims/summ/main/SummControlRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/../efficient-backtracking/src/main/java/it/unipd/dei/ims/summ/main/SummControlRoom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../efficient-backtracking/src/main/java/it/unipd/dei/ims/summ/offline/Partition.java" beforeDir="false" afterPath="$PROJECT_DIR$/../efficient-backtracking/src/main/java/it/unipd/dei/ims/summ/offline/Partition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../efficient-backtracking/src/main/java/it/unipd/dei/ims/summ/offline/SummNodeInitialization.java" beforeDir="false" afterPath="$PROJECT_DIR$/../efficient-backtracking/src/main/java/it/unipd/dei/ims/summ/offline/SummNodeInitialization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../efficient-backtracking/src/test/java/it/unipd/dei/ims/summ/test/jdbc/RepeatedInsertTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../efficient-backtracking/src/test/java/it/unipd/dei/ims/summ/test/jdbc/RepeatedInsertTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/datastructures/BackwardComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/datastructures/BackwardComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/datastructures/BackwardQueues.class" beforeDir="false" afterPath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/datastructures/BackwardQueues.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/datastructures/BackwardT.class" beforeDir="false" afterPath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/datastructures/BackwardT.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/datastructures/BackwardTList.class" beforeDir="false" afterPath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/datastructures/BackwardTList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/datastructures/ExtendedBackwardTList.class" beforeDir="false" afterPath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/datastructures/ExtendedBackwardTList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/datastructures/KeywordNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/datastructures/KeywordNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/datastructures/RootPortalCouple.class" beforeDir="false" afterPath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/datastructures/RootPortalCouple.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/datastructures/SummComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/datastructures/SummComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/datastructures/SummDocument.class" beforeDir="false" afterPath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/datastructures/SummDocument.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/datastructures/SummDocumentComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/datastructures/SummDocumentComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/datastructures/SummNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/datastructures/SummNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/datastructures/SummQueues.class" beforeDir="false" afterPath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/datastructures/SummQueues.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/datastructures/SummTList.class" beforeDir="false" afterPath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/datastructures/SummTList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/datastructures/SummTListComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/datastructures/SummTListComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/datastructures/T.class" beforeDir="false" afterPath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/datastructures/T.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/datastructures/TList.class" beforeDir="false" afterPath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/datastructures/TList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/main/SummControlRoom$OfflineTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/main/SummControlRoom$OfflineTask.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/main/SummControlRoom$OnlineTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/main/SummControlRoom$OnlineTask.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/main/SummControlRoom.class" beforeDir="false" afterPath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/main/SummControlRoom.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/offline/Partition.class" beforeDir="false" afterPath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/offline/Partition.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/offline/SummNodeInitialization.class" beforeDir="false" afterPath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/offline/SummNodeInitialization.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/online/Backward.class" beforeDir="false" afterPath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/online/Backward.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/online/Summ.class" beforeDir="false" afterPath="$PROJECT_DIR$/../efficient-backtracking/target/classes/it/unipd/dei/ims/summ/online/Summ.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../efficient-backtracking/target/test-classes/it/unipd/dei/ims/summ/test/jdbc/RepeatedInsertTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../efficient-backtracking/target/test-classes/it/unipd/dei/ims/summ/test/jdbc/RepeatedInsertTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../efficient-backtracking/target/test-classes/it/unipd/dei/ims/test/jgrapht/HelloJGraphT$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../efficient-backtracking/target/test-classes/it/unipd/dei/ims/test/jgrapht/HelloJGraphT$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../efficient-backtracking/target/test-classes/it/unipd/dei/ims/test/jgrapht/HelloJGraphT$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../efficient-backtracking/target/test-classes/it/unipd/dei/ims/test/jgrapht/HelloJGraphT$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../efficient-backtracking/target/test-classes/it/unipd/dei/ims/test/jgrapht/HelloJGraphT.class" beforeDir="false" afterPath="$PROJECT_DIR$/../efficient-backtracking/target/test-classes/it/unipd/dei/ims/test/jgrapht/HelloJGraphT.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../efficient-backtracking/target/test-classes/it/unipd/dei/ims/test/jgrapht/LabeledEdges.class" beforeDir="false" afterPath="$PROJECT_DIR$/../efficient-backtracking/target/test-classes/it/unipd/dei/ims/test/jgrapht/LabeledEdges.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../efficient-backtracking/target/test-classes/it/unipd/dei/ims/test/jgrapht/RelationshipEdge.class" beforeDir="false" afterPath="$PROJECT_DIR$/../efficient-backtracking/target/test-classes/it/unipd/dei/ims/test/jgrapht/RelationshipEdge.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../offline_rdf_clustering/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../offline_rdf_clustering/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../offline_rdf_clustering/properties/clustering.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../offline_rdf_clustering/properties/clustering.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../offline_rdf_clustering/properties/lmdb_query_list.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../offline_rdf_clustering/properties/lmdb_query_list.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../offline_rdf_clustering/properties/lmdb_query_list_2.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../offline_rdf_clustering/properties/lmdb_query_list_2.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../offline_rdf_clustering/properties/main.old.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../offline_rdf_clustering/properties/main.old.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../offline_rdf_clustering/properties/main.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../offline_rdf_clustering/properties/main.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../offline_rdf_clustering/src/main/java/it/unid/dei/ims/tsa/online/yosi/TSAYosiAnswerRankingPhase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../offline_rdf_clustering/src/main/java/it/unid/dei/ims/tsa/online/yosi/TSAYosiAnswerRankingPhase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../offline_rdf_clustering/src/main/java/it/unipd/dei/ims/tsa/main/MultipleMergedGraphsExecutioner.java" beforeDir="false" afterPath="$PROJECT_DIR$/../offline_rdf_clustering/src/main/java/it/unipd/dei/ims/tsa/main/MultipleMergedGraphsExecutioner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../offline_rdf_clustering/src/main/java/it/unipd/dei/ims/tsa/main/TSAControlRoomWithTimeouts.java" beforeDir="false" afterPath="$PROJECT_DIR$/../offline_rdf_clustering/src/main/java/it/unipd/dei/ims/tsa/main/TSAControlRoomWithTimeouts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../offline_rdf_clustering/src/main/java/it/unipd/dei/ims/tsa/main/TSAMainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/../offline_rdf_clustering/src/main/java/it/unipd/dei/ims/tsa/main/TSAMainClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../offline_rdf_clustering/src/main/java/it/unipd/dei/ims/tsa/offline/ClusteringPhase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../offline_rdf_clustering/src/main/java/it/unipd/dei/ims/tsa/offline/ClusteringPhase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../offline_rdf_clustering/src/main/java/it/unipd/dei/ims/tsa/offline/ComputeTheTopKConnectivityList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../offline_rdf_clustering/src/main/java/it/unipd/dei/ims/tsa/offline/ComputeTheTopKConnectivityList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../offline_rdf_clustering/src/main/java/it/unipd/dei/ims/tsa/offline/FromRDFGraphsToTRECDocuments.java" beforeDir="false" afterPath="$PROJECT_DIR$/../offline_rdf_clustering/src/main/java/it/unipd/dei/ims/tsa/offline/FromRDFGraphsToTRECDocuments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../offline_rdf_clustering/src/main/java/it/unipd/dei/ims/tsa/offline/IndexerDirectoryOfTRECFiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/../offline_rdf_clustering/src/main/java/it/unipd/dei/ims/tsa/offline/IndexerDirectoryOfTRECFiles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../offline_rdf_clustering/src/main/java/it/unipd/dei/ims/tsa/offline/StatisticsComputationPhase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../offline_rdf_clustering/src/main/java/it/unipd/dei/ims/tsa/offline/StatisticsComputationPhase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../offline_rdf_clustering/src/main/java/it/unipd/dei/ims/tsa/offline/VirtualDocumentCreationPhase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../offline_rdf_clustering/src/main/java/it/unipd/dei/ims/tsa/offline/VirtualDocumentCreationPhase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../offline_rdf_clustering/src/main/java/it/unipd/dei/ims/tsa/online/AnswerCompressionPhase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../offline_rdf_clustering/src/main/java/it/unipd/dei/ims/tsa/online/AnswerCompressionPhase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../offline_rdf_clustering/src/main/java/it/unipd/dei/ims/tsa/online/AnswerRankingPhase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../offline_rdf_clustering/src/main/java/it/unipd/dei/ims/tsa/online/AnswerRankingPhase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../offline_rdf_clustering/src/main/java/it/unipd/dei/ims/tsa/online/SmartExplorationPhase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../offline_rdf_clustering/src/main/java/it/unipd/dei/ims/tsa/online/SmartExplorationPhase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../offline_rdf_clustering/src/main/java/it/unipd/dei/ims/tsa/online/VDPWithBacktrackingPhase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../offline_rdf_clustering/src/main/java/it/unipd/dei/ims/tsa/online/VirtualDocAndPruningOnlinePhase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../offline_rdf_clustering/src/main/java/it/unipd/dei/ims/tsa/online/VirtualDocAndPruningOnlinePhase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../offline_rdf_clustering/target/test-classes/it/unipd/dei/ims/clustering/executable/test/BlazegraphClusteringExecutableTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../offline_rdf_clustering/target/test-classes/it/unipd/dei/ims/clustering/executable/test/BlazegraphClusteringExecutableTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../offline_rdf_clustering/target/test-classes/it/unipd/dei/ims/clustering/executable/test/BlazegraphFastClusteringTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../offline_rdf_clustering/target/test-classes/it/unipd/dei/ims/clustering/executable/test/BlazegraphFastClusteringTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../offline_rdf_clustering/target/test-classes/it/unipd/dei/ims/clustering/executable/test/ClusteringExecutableTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../offline_rdf_clustering/target/test-classes/it/unipd/dei/ims/clustering/executable/test/ClusteringExecutableTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../offline_rdf_clustering/target/test-classes/it/unipd/dei/ims/clustering/test/xml/XmlParserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../offline_rdf_clustering/target/test-classes/it/unipd/dei/ims/clustering/test/xml/XmlParserTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../offline_rdf_clustering/target/test-classes/it/unipd/dei/ims/reading/answer/AnswerReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/../offline_rdf_clustering/target/test-classes/it/unipd/dei/ims/reading/answer/AnswerReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/properties/ConstructQueryBlazegraphToolkit.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/properties/ConstructQueryBlazegraphToolkit.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/properties/KeywordSearchAssessor.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/properties/KeywordSearchAssessor.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/properties/RDFtoRDBTripleStoreConverter.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/properties/RDFtoRDBTripleStoreConverter.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/properties/RecapFileCreator.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/properties/RecapFileCreator.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/rum.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/rum.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/src/main/java/it/unipd/dei/ims/datastructure/ConnectionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/src/main/java/it/unipd/dei/ims/datastructure/ConnectionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/src/main/java/it/unipd/dei/ims/rum/assessment/KeywordSearchAssessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/src/main/java/it/unipd/dei/ims/rum/assessment/KeywordSearchAssessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/src/main/java/it/unipd/dei/ims/rum/convertion/RDFtoRDBTripleStoreConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/src/main/java/it/unipd/dei/ims/rum/convertion/RDFtoRDBTripleStoreConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/src/main/java/it/unipd/dei/ims/rum/insight/RecapFileCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/src/main/java/it/unipd/dei/ims/rum/insight/RecapFileCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/src/main/java/it/unipd/dei/ims/rum/utilities/UrlUtilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/src/main/java/it/unipd/dei/ims/rum/utilities/UrlUtilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/convertion/FromRDFtoTRECConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/convertion/FromRDFtoTRECConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/convertion/FromSubgrapfRDFToTRECPhase.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/convertion/FromSubgrapfRDFToTRECPhase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/convertion/FromTSVToRDFConverter$MonitorThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/convertion/FromTSVToRDFConverter$MonitorThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/convertion/FromTSVToRDFConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/convertion/FromTSVToRDFConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/convertion/IMDBFromTSVFileToRDFRepositoryConverter$MonitorThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/convertion/IMDBFromTSVFileToRDFRepositoryConverter$MonitorThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/convertion/IMDBFromTSVFileToRDFRepositoryConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/convertion/IMDBFromTSVFileToRDFRepositoryConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/convertion/InsertFilesPathInsideRDBDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/convertion/InsertFilesPathInsideRDBDatabase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/convertion/RDFtoRDBTripleStoreConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/convertion/RDFtoRDBTripleStoreConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/indexing/RumIndexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/indexing/RumIndexer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/indexing/RumTRECIndexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/indexing/RumTRECIndexer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/main/FromRDFtoTRECConverterMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/main/FromRDFtoTRECConverterMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/main/RumFromTSVFileTORDFRepositoryConverterExecutable.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/main/RumFromTSVFileTORDFRepositoryConverterExecutable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/query/RumQueryIndex.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/query/RumQueryIndex.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/utilities/BlancoUsefuMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/utilities/BlancoUsefuMethods.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/utilities/BlazegraphUsefulMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/utilities/BlazegraphUsefulMethods.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/utilities/MapsUsefulMethods$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/utilities/MapsUsefulMethods$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/utilities/MapsUsefulMethods$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/utilities/MapsUsefulMethods$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/utilities/MapsUsefulMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/utilities/MapsUsefulMethods.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/utilities/PathUsefulMethods$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/utilities/PathUsefulMethods$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/utilities/PathUsefulMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/utilities/PathUsefulMethods.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/utilities/PropertiesUsefulMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/utilities/PropertiesUsefulMethods.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/utilities/SQLUtilities.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/utilities/SQLUtilities.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/utilities/StringUsefulMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/utilities/StringUsefulMethods.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/utilities/TerrierUsefulMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/utilities/TerrierUsefulMethods.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/utilities/UrlUtilities.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/utilities/UrlUtilities.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/utilities/UsefulConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/classes/it/unipd/dei/ims/rum/utilities/UsefulConstants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/blazegraph/test/BlaxegraphLoadGraphTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/blazegraph/test/BlaxegraphLoadGraphTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/blazegraph/test/BlazegraphFastClustering.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/blazegraph/test/BlazegraphFastClustering.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/blazegraph/test/BlazegraphGeneralIteratorQueryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/blazegraph/test/BlazegraphGeneralIteratorQueryTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/blazegraph/test/BlazegraphIteratorAndUpdaterTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/blazegraph/test/BlazegraphIteratorAndUpdaterTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/blazegraph/test/BlazegraphIteratortest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/blazegraph/test/BlazegraphIteratortest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/blazegraph/test/BlazegraphNumberOfTriplesQueryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/blazegraph/test/BlazegraphNumberOfTriplesQueryTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/blazegraph/test/CloseBlazegraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/blazegraph/test/CloseBlazegraph.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/blazegraph/test/HelloBlazegraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/blazegraph/test/HelloBlazegraph.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/query/NumberOfTriplesByHand.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/query/NumberOfTriplesByHand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/query/NumberOfTriplesQuery.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/query/NumberOfTriplesQuery.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/rum/clustering/test/BlazegraphClusteringExecutableTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/rum/clustering/test/BlazegraphClusteringExecutableTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/rum/clustering/test/BlazegraphStatistics$MonitorStatisticsThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/rum/clustering/test/BlazegraphStatistics$MonitorStatisticsThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/rum/clustering/test/BlazegraphStatistics.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/rum/clustering/test/BlazegraphStatistics.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/rum/clustering/test/BlazegraphStatisticsWithDatabaseSupportTest$MonitorStatisticsThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/rum/clustering/test/BlazegraphStatisticsWithDatabaseSupportTest$MonitorStatisticsThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/rum/clustering/test/BlazegraphStatisticsWithDatabaseSupportTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/rum/clustering/test/BlazegraphStatisticsWithDatabaseSupportTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/rum/clustering/test/BlazegraphStatisticsWithDatabaseTest$MonitorStatisticsThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/rum/clustering/test/BlazegraphStatisticsWithDatabaseTest$MonitorStatisticsThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/rum/clustering/test/BlazegraphStatisticsWithDatabaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/rum/clustering/test/BlazegraphStatisticsWithDatabaseTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/rum/model/test/ModelIteratorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/rum/model/test/ModelIteratorTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/rum/model/test/ModelLoaderTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/rum/model/test/ModelLoaderTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/rum/model/test/ModelReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/rum/model/test/ModelReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/rum/model/test/ModelTransactionalLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/rum/model/test/ModelTransactionalLoader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/rum/mysql/MySQLConnectionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/rum/mysql/MySQLConnectionTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/rum/postre/test/PostreSQLConnectionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/rum/postre/test/PostreSQLConnectionTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/rum/terrier/test/TRECollectionIndexingTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/rum/terrier/test/TRECollectionIndexingTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/string/CamelCaseSplitterTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/string/CamelCaseSplitterTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/test/assess/AssessTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../rum/target/test-classes/it/unipd/dei/ims/test/assess/AssessTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../terrier-custom/bin/anyclass.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../terrier-custom/bin/anyclass.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../terrier-custom/bin/compile_package.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../terrier-custom/bin/compile_package.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../terrier-custom/bin/debug.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../terrier-custom/bin/debug.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../terrier-custom/bin/desktop_terrier.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../terrier-custom/bin/desktop_terrier.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../terrier-custom/bin/http_terrier.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../terrier-custom/bin/http_terrier.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../terrier-custom/bin/interactive_terrier.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../terrier-custom/bin/interactive_terrier.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../terrier-custom/bin/trec_eval.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../terrier-custom/bin/trec_eval.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../terrier-custom/bin/trec_setup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../terrier-custom/bin/trec_setup.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../terrier-custom/bin/trec_terrier.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../terrier-custom/bin/trec_terrier.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../terrier-custom/etc/collection.spec copia " beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../terrier-custom/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../terrier-custom/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../terrier-custom/src/core/it/unipd/dei/ims/terrier/utilities/UrlUtilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/../terrier-custom/src/core/it/unipd/dei/ims/terrier/utilities/UrlUtilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../terrier-custom/src/core/org/terrier/compression/bit/MemoryOutputStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/../terrier-custom/src/core/org/terrier/compression/bit/MemoryOutputStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../terrier-custom/src/core/org/terrier/matching/models/aftereffect/L5.java" beforeDir="false" afterPath="$PROJECT_DIR$/../terrier-custom/src/core/org/terrier/matching/models/aftereffect/L5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../terrier-custom/src/core/org/terrier/matching/models/normalisation/NormalisationJN.java" beforeDir="false" afterPath="$PROJECT_DIR$/../terrier-custom/src/core/org/terrier/matching/models/normalisation/NormalisationJN.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../terrier-custom/src/core/org/terrier/structures/LexiconOutputStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/../terrier-custom/src/core/org/terrier/structures/LexiconOutputStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../terrier-custom/src/core/org/terrier/structures/bit/BlockInvertedIndexInputStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/../terrier-custom/src/core/org/terrier/structures/bit/BlockInvertedIndexInputStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../terrier-custom/src/core/org/terrier/structures/bit/DirectIndexInputStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/../terrier-custom/src/core/org/terrier/structures/bit/DirectIndexInputStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../terrier-custom/src/core/org/terrier/structures/bit/DirectInvertedOutputStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/../terrier-custom/src/core/org/terrier/structures/bit/DirectInvertedOutputStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../terrier-custom/src/core/org/terrier/structures/bit/InvertedIndexInputStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/../terrier-custom/src/core/org/terrier/structures/bit/InvertedIndexInputStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../terrier-custom/src/core/org/terrier/structures/collections/LRUMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/../terrier-custom/src/core/org/terrier/structures/collections/LRUMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../terrier-custom/src/core/org/terrier/structures/indexing/singlepass/BasicSinglePassIndexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../terrier-custom/src/core/org/terrier/structures/indexing/singlepass/BasicSinglePassIndexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../terrier-custom/src/core/org/terrier/structures/indexing/singlepass/BlockInverted2DirectIndexBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../terrier-custom/src/core/org/terrier/structures/indexing/singlepass/BlockInverted2DirectIndexBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../terrier-custom/src/core/org/terrier/structures/indexing/singlepass/Inverted2DirectIndexBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../terrier-custom/src/core/org/terrier/structures/indexing/singlepass/Inverted2DirectIndexBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../terrier-custom/src/core/org/terrier/structures/indexing/singlepass/RunWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../terrier-custom/src/core/org/terrier/structures/indexing/singlepass/RunWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../terrier-custom/src/core/org/terrier/structures/indexing/singlepass/SimplePostingInRun.java" beforeDir="false" afterPath="$PROJECT_DIR$/../terrier-custom/src/core/org/terrier/structures/indexing/singlepass/SimplePostingInRun.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../terrier-custom/src/core/org/terrier/terms/SkipTermPipeline.java" beforeDir="false" afterPath="$PROJECT_DIR$/../terrier-custom/src/core/org/terrier/terms/SkipTermPipeline.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../terrier-custom/src/core/org/terrier/utility/Rounding.java" beforeDir="false" afterPath="$PROJECT_DIR$/../terrier-custom/src/core/org/terrier/utility/Rounding.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../terrier-custom/src/trec/org/terrier/evaluation/AdhocEvaluation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../terrier-custom/src/trec/org/terrier/evaluation/AdhocEvaluation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yosi_rdf/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../yosi_rdf/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yosi_rdf/properties/main.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../yosi_rdf/properties/main.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yosi_rdf/src/main/java/it/unipd/dei/ims/yosi/main/MRFKSControlRoomWithTimer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../yosi_rdf/src/main/java/it/unipd/dei/ims/yosi/main/MRFKSControlRoomWithTimer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yosi_rdf/src/main/java/it/unipd/dei/ims/yosi/main/YosiMainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/../yosi_rdf/src/main/java/it/unipd/dei/ims/yosi/main/YosiMainClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yosi_rdf/src/main/java/it/unipd/dei/ims/yosi/offline/SingleNodeDocumentCreationPhase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../yosi_rdf/src/main/java/it/unipd/dei/ims/yosi/offline/SingleNodeDocumentCreationPhase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yosi_rdf/src/main/java/it/unipd/dei/ims/yosi/offline/StatisticsComputationPhase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../yosi_rdf/src/main/java/it/unipd/dei/ims/yosi/offline/StatisticsComputationPhase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yosi_rdf/src/main/java/it/unipd/dei/ims/yosi/offline/VirtualGraphsBuildingPhase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../yosi_rdf/src/main/java/it/unipd/dei/ims/yosi/offline/VirtualGraphsBuildingPhase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yosi_rdf/src/main/java/it/unipd/dei/ims/yosi/offline/YosiStatisticsCalculationPhase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../yosi_rdf/src/main/java/it/unipd/dei/ims/yosi/offline/YosiStatisticsCalculationPhase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yosi_rdf/src/main/java/it/unipd/dei/ims/yosi/online/AnswerRankingPhase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../yosi_rdf/src/main/java/it/unipd/dei/ims/yosi/online/AnswerRankingPhase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yosi_rdf/src/main/java/it/unipd/dei/ims/yosi/online/AnswerSubgraphGenerationPhase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../yosi_rdf/src/main/java/it/unipd/dei/ims/yosi/online/AnswerSubgraphGenerationPhase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yosi_rdf/src/main/java/it/unipd/dei/ims/yosi/online/TopKeywordNodeSelectionPhase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../yosi_rdf/src/main/java/it/unipd/dei/ims/yosi/online/TopKeywordNodeSelectionPhase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yosi_rdf/src/main/java/it/unipd/dei/ims/yosi/online/TopRootsSelectionPhase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../yosi_rdf/src/main/java/it/unipd/dei/ims/yosi/online/TopRootsSelectionPhase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yosi_rdf/target/classes/it/unipd/dei/ims/yosi/datastructures/DijkstraExecution.class" beforeDir="false" afterPath="$PROJECT_DIR$/../yosi_rdf/target/classes/it/unipd/dei/ims/yosi/datastructures/DijkstraExecution.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yosi_rdf/target/classes/it/unipd/dei/ims/yosi/datastructures/NodeItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/../yosi_rdf/target/classes/it/unipd/dei/ims/yosi/datastructures/NodeItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yosi_rdf/target/classes/it/unipd/dei/ims/yosi/datastructures/YosiComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../yosi_rdf/target/classes/it/unipd/dei/ims/yosi/datastructures/YosiComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yosi_rdf/target/classes/it/unipd/dei/ims/yosi/datastructures/YosiDataWrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../yosi_rdf/target/classes/it/unipd/dei/ims/yosi/datastructures/YosiDataWrapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yosi_rdf/target/classes/it/unipd/dei/ims/yosi/datastructures/YosiDocument.class" beforeDir="false" afterPath="$PROJECT_DIR$/../yosi_rdf/target/classes/it/unipd/dei/ims/yosi/datastructures/YosiDocument.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yosi_rdf/target/classes/it/unipd/dei/ims/yosi/datastructures/YosiDocumentComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../yosi_rdf/target/classes/it/unipd/dei/ims/yosi/datastructures/YosiDocumentComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yosi_rdf/target/classes/it/unipd/dei/ims/yosi/datastructures/YosiGraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/../yosi_rdf/target/classes/it/unipd/dei/ims/yosi/datastructures/YosiGraph.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yosi_rdf/target/classes/it/unipd/dei/ims/yosi/datastructures/YosiNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/../yosi_rdf/target/classes/it/unipd/dei/ims/yosi/datastructures/YosiNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yosi_rdf/target/classes/it/unipd/dei/ims/yosi/datastructures/YosiNodeScoreComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../yosi_rdf/target/classes/it/unipd/dei/ims/yosi/datastructures/YosiNodeScoreComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yosi_rdf/target/classes/it/unipd/dei/ims/yosi/datastructures/YosiPath.class" beforeDir="false" afterPath="$PROJECT_DIR$/../yosi_rdf/target/classes/it/unipd/dei/ims/yosi/datastructures/YosiPath.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yosi_rdf/target/classes/it/unipd/dei/ims/yosi/datastructures/YosiPathComparatorByWeight.class" beforeDir="false" afterPath="$PROJECT_DIR$/../yosi_rdf/target/classes/it/unipd/dei/ims/yosi/datastructures/YosiPathComparatorByWeight.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yosi_rdf/target/classes/it/unipd/dei/ims/yosi/utils/MathUsefulMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/../yosi_rdf/target/classes/it/unipd/dei/ims/yosi/utils/MathUsefulMethods.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yosi_rdf/target/classes/it/unipd/dei/ims/yosi/utils/YosiNodeStaticScoringFunction.class" beforeDir="false" afterPath="$PROJECT_DIR$/../yosi_rdf/target/classes/it/unipd/dei/ims/yosi/utils/YosiNodeStaticScoringFunction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yosi_rdf/target/test-classes/it/unipd/dei/ims/yosi/test/dom/TestDom.class" beforeDir="false" afterPath="$PROJECT_DIR$/../yosi_rdf/target/test-classes/it/unipd/dei/ims/yosi/test/dom/TestDom.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yosi_rdf/target/test-classes/it/unipd/dei/ims/yosi/test/structures/CopyClassTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../yosi_rdf/target/test-classes/it/unipd/dei/ims/yosi/test/structures/CopyClassTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yosi_rdf/target/test-classes/it/unipd/dei/ims/yosi/test/structures/CustomMinHeapTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../yosi_rdf/target/test-classes/it/unipd/dei/ims/yosi/test/structures/CustomMinHeapTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yosi_rdf/target/test-classes/it/unipd/dei/ims/yosi/test/terrier/BigramIndexTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../yosi_rdf/target/test-classes/it/unipd/dei/ims/yosi/test/terrier/BigramIndexTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yosi_rdf/target/test-classes/it/unipd/dei/ims/yosi/test/terrier/BigramTokenisationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../yosi_rdf/target/test-classes/it/unipd/dei/ims/yosi/test/terrier/BigramTokenisationTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yosi_rdf/target/test-classes/it/unipd/dei/ims/yosi/test/terrier/IndexWithFieldsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../yosi_rdf/target/test-classes/it/unipd/dei/ims/yosi/test/terrier/IndexWithFieldsTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yosi_rdf/target/test-classes/it/unipd/dei/ims/yosi/test/terrier/RetrieveCorrectDocumentTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../yosi_rdf/target/test-classes/it/unipd/dei/ims/yosi/test/terrier/RetrieveCorrectDocumentTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yosi_rdf/target/test-classes/it/unipd/dei/ims/yosi/test/terrier/StopwordsExecutionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../yosi_rdf/target/test-classes/it/unipd/dei/ims/yosi/test/terrier/StopwordsExecutionTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yosi_rdf/target/test-classes/it/unipd/dei/ims/yosi/test/terrier/TaggedDocumentFromInputStreamTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../yosi_rdf/target/test-classes/it/unipd/dei/ims/yosi/test/terrier/TaggedDocumentFromInputStreamTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yosi_rdf/target/test-classes/it/unipd/dei/ims/yosi/test/terrier/TokenizationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../yosi_rdf/target/test-classes/it/unipd/dei/ims/yosi/test/terrier/TokenizationTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yosi_rdf/target/test-classes/it/unipd/dei/ims/yosi/test/terrier/WordsInsideADocumentTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../yosi_rdf/target/test-classes/it/unipd/dei/ims/yosi/test/terrier/WordsInsideADocumentTest.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../offline_rdf_clustering" />
+  </component>
+  <component name="ProjectId" id="2ISvmGKPriycrRccFkWgAoOi4tg" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../rdf_blanco" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.13157892" />
+    <property name="project.structure.side.proportion" value="0.15174508" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="RunManager" selected="Application.TSAControlRoomWithTimeouts">
+    <configuration name="TSAControlRoomWithTimeouts" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="it.unipd.dei.ims.tsa.main.TSAControlRoomWithTimeouts" />
+      <module name="offline_clustering_rdf" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.unipd.dei.ims.tsa.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TSAMainClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="it.unipd.dei.ims.tsa.main.TSAMainClass" />
+      <module name="offline_clustering_rdf" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.unipd.dei.ims.tsa.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TSAControlRoomWithTimeouts" />
+        <item itemvalue="Application.TSAMainClass" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b7d68729-7181-4f06-a50b-cefd8a4bd40a" name="Default Changelist" comment="" />
+      <created>1670187958974</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1670187958974</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
