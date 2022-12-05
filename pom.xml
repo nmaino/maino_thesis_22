@@ -18,4 +18,24 @@
             </plugin>
         </plugins>
     </build>
+    <dependencies>
+        <dependency>
+            <groupId>com.github.jsonld-java</groupId>
+            <artifactId>jsonld-java</artifactId>
+            <version>0.12.5</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>it.unipd.dei.ims</groupId>
+            <artifactId>rum</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>it.unipd.dei.ims</groupId>
+            <artifactId>offline_clustering_rdf</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 </project>
