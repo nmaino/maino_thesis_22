@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/../rum/pom.xml" />
         <option value="$PROJECT_DIR$/../terrier-custom/pom.xml" />
         <option value="$PROJECT_DIR$/../yosi_rdf/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
