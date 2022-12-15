@@ -1,13 +1,11 @@
 package it.unipd.dei.maino.btsa;
 
 import com.github.jsonldjava.shaded.com.google.common.base.Stopwatch;
-import it.unipd.dei.ims.datastructure.ConnectionHandler;
 import it.unipd.dei.ims.datastructure.ThreadState;
 import it.unipd.dei.ims.rum.utilities.BlazegraphUsefulMethods;
 import it.unipd.dei.ims.rum.utilities.PropertiesUsefulMethods;
 import it.unipd.dei.ims.terrier.utilities.UrlUtilities;
 import it.unipd.dei.ims.tsa.offline.ComputeTheTopKConnectivityList;
-import it.unipd.dei.maino.utils.FileUtils;
 import org.apache.commons.lang3.tuple.MutablePair;
 import org.apache.commons.lang3.tuple.Pair;
 import org.openrdf.model.*;
@@ -40,6 +38,8 @@ import java.util.*;
  */
 public class BackwardClusteringPhase {
 
+    Boolean found = false;
+
     // To connect to the database
     private String jdbcConnectionString;
     private String username;
@@ -70,6 +70,10 @@ public class BackwardClusteringPhase {
     // Total visited nodes
     private int totBlackNodes;
 
+    // Last id of the folder TSA produced
+    private int TSALastGraphId;
+    private int TSALastGraphFolderId;
+
     // Accessory variables to print clusters out
     private int outGraphsCounter;
     private int outGraphsDirCounter;
@@ -87,6 +91,7 @@ public class BackwardClusteringPhase {
             "SELECT subject_, predicate_, object_ FROM public.triple_store WHERE (subject_ = ?);";
 
     private Stopwatch timer;
+
 
     public enum Color {
         white,
@@ -135,6 +140,11 @@ public class BackwardClusteringPhase {
 
             this.schema = map.get("schema");
 
+            this.TSALastGraphId =  Integer.parseInt(map.get("tsa.last.graph.id"));
+            this.TSALastGraphFolderId = Integer.parseInt(map.get("tsa.last.graph.folder.id"));
+            this.outGraphsCounter += this.TSALastGraphId;
+            this.outGraphsDirCounter += this.TSALastGraphFolderId;
+
             // Adding the correct (just read) schema
             SQL_SELECT_SOURCE_NODES =
                     "SELECT node_name FROM " + this.schema + ".node WHERE out_degree >= ?";
@@ -148,6 +158,7 @@ public class BackwardClusteringPhase {
 
             SQL_GET_OUT_NEIGHBORHOOD =
                     "SELECT subject_, predicate_, object_ FROM " + this.schema + ".triple_store WHERE (subject_ = ?);";
+
 
         } catch (IOException e) {
 
@@ -214,10 +225,6 @@ public class BackwardClusteringPhase {
 
         if (!f.exists()) { f.mkdirs(); }
 
-        System.out.println("Created the directory for clusters. Now emptying it if necessary...");
-        FileUtils.deleteFolder(f);
-        System.out.println("done.");
-
         // Iterator over the terminals
         for (String t : terminalNodesSet) {
 
@@ -234,6 +241,9 @@ public class BackwardClusteringPhase {
 
             if (terminalColor != Color.black) {
 
+                nodeColorMap.put(t, Color.black);
+                totBlackNodes++;
+
                 // Build a new cluster from this terminal
                 Model cluster = this.extendCluster(connection, t);
 
@@ -245,6 +255,7 @@ public class BackwardClusteringPhase {
     }
 
     /**
+     * Print out the clusters.
      *
      * @param cluster cluster to be printed out
      */
@@ -276,6 +287,11 @@ public class BackwardClusteringPhase {
                 + this.outGraphsCounter + ".ttl";
 
         BlazegraphUsefulMethods.printTheDamnGraph(cluster, path);
+        if (found) {
+            System.err.println("\nNODE IS @ " + this.outGraphsDirCounter + "/"
+                    + this.outGraphsCounter + ".ttl\n");
+            found = false;
+        }
     }
 
     /**
@@ -309,8 +325,8 @@ public class BackwardClusteringPhase {
             String t = tPair.getLeft();
 
             // mark the node t as visited
-            nodeColorMap.put(t, Color.black);
-            totBlackNodes++;
+            // nodeColorMap.put(t, Color.black);
+            // totBlackNodes++;
 
             // Decrement the radius
             int radius = tPair.getRight() - 1;
@@ -397,7 +413,7 @@ public class BackwardClusteringPhase {
                 // Start the actual "walking phase" (if node is unvisited, there's still
                 // available radius and the predicate has required frequency)
                 else if ((radius > 0)
-                        && (subjColor != Color.black)
+                       // && (subjColor != Color.black)
                         && connectivityList.contains(predicate.toString())) {
 
                     // Furthermore, it is a terminal node (not source)
@@ -507,6 +523,16 @@ public class BackwardClusteringPhase {
                 String pr = rs.getString(2);
                 String obj = rs.getString(3);
 
+
+                // orlando bloom doc 488747
+                // tom cruise doc 488182
+                // Marlon Brando doc
+
+                if (obj.equals("http://data.linkedmdb.org/resource/actor/29581")) {
+                    System.err.println("NODE OF amy adams WAS PARSED!");
+                    found = true;
+                }
+
                 URI subject = new URIImpl(sbj); // TODO: VERIFY HERE IF SUBJECT IS A URI (CAN IT BE OTHERWISE?)
                 URI predicate = new URIImpl(pr);
                 Value object = new URIImpl(obj); // Can't be a literal
@@ -571,15 +597,17 @@ public class BackwardClusteringPhase {
 
                 // Add the terminal node and sets its color to unvisited.
                 this.terminalNodesSet.add(nodeString);
-                this.nodeColorMap.put(nodeString, BackwardClusteringPhase.Color.white);
+                this.nodeColorMap.put(nodeString, Color.white);
 
                 mapCounter++;
 
                 if (mapCounter % 100000 == 0) {
 
-                    System.err.println("Selected " + mapCounter + " terminal nodes");
+                    System.out.println("Selected " + mapCounter + " terminal nodes");
                 }
             }
+
+            System.out.println("Selected " + mapCounter + " terminal nodes in total");
 
         } catch (SQLException e) {
 
