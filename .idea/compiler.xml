@@ -19,7 +19,7 @@
       <module name="EfficientBacktracking" target="8" />
       <module name="maino_thesis_22" target="8" />
       <module name="offline_clustering_rdf" target="8" />
-      <module name="rum" target="1.7" />
+      <module name="rum" target="8" />
       <module name="terrier-core" target="1.8" />
       <module name="yosi_rdf" target="7" />
     </bytecodeTargetLevel>
