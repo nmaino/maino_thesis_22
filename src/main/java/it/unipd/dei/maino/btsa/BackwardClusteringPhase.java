@@ -173,7 +173,7 @@ public class BackwardClusteringPhase {
      * @param connectivityList list with the commonest predicates in the RDF datasets,
      *                         the ones to be traversed.
      * */
-    private void BackwardTSA(List<String> connectivityList) {
+    private void backwardTSA(List<String> connectivityList) {
 
         Connection connection = null;
 
@@ -629,6 +629,6 @@ public class BackwardClusteringPhase {
         List<String> connectivityList =
                 phase2.getTopKConnectivityList();
 
-        TSA2phase.BackwardTSA(connectivityList);
+        TSA2phase.backwardTSA(connectivityList);
     }
 }
