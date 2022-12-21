@@ -72,6 +72,10 @@ public class RandomizedClusteringPhase {
     private static String SQL_SELECT_SOURCE_NODES =
             "SELECT node_name FROM public.node WHERE out_degree >= ?";
 
+    // Version 2 of previous query for computeNodesSetsWRDB_V2 method.
+    private static String SQL_RANDOMLY_SELECT_SOURCE_NODES =
+            "SELECT node_name FROM public.node WHERE out_degree >= ? ORDER BY RANDOM()";
+
     private static String SQL_SELECT_TERMINAL_NODES =
             "SELECT node_name FROM public.node WHERE in_degree >= ?";
 
@@ -147,13 +151,17 @@ public class RandomizedClusteringPhase {
             SQL_SELECT_SOURCE_NODES =
                     "SELECT node_name FROM " + this.schema + ".node WHERE out_degree >= ?";
 
+            // Version 2 of previous query for computeNodesSetsWRDB_V2 method.
+            SQL_RANDOMLY_SELECT_SOURCE_NODES =
+                    "SELECT node_name FROM "+ this.schema + ".node WHERE out_degree >= ? ORDER BY RANDOM()";
+
             SQL_SELECT_TERMINAL_NODES =
                     "SELECT node_name FROM " + this.schema + ".node WHERE in_degree >= ?";
 
             SQL_GET_OUT_NEIGHBORHOOD =
                     "SELECT subject_, predicate_, object_ FROM " + this.schema + ".triple_store WHERE (subject_ = ?);";
 
-            // For the RDB version of the algorithm...
+            // following the RDB version of the algorithm... deprecated now.
             SQL_TRUNCATE_SOURCE_NODES_TABLE =
                     "TRUNCATE TABLE " + this.schema + ".source_nodes;";
 
@@ -199,10 +207,10 @@ public class RandomizedClusteringPhase {
                     this.password);
 
             // Get sets of terminal and source nodes according to the chosen parameters
-            this.computeNodesSetsWRDB(connection);
+            this.computeNodesSetsWRDB_V2(connection);
 
             // Create the clusters
-            this.randomizedAggregationPhaseWRDB(connection);
+            this.randomizedAggregationPhase(connection);
 
         } catch (SQLException e) {
 
@@ -228,7 +236,6 @@ public class RandomizedClusteringPhase {
      *
      * @param connection Connection object to the RDB
      */
-    @Deprecated
     private void randomizedAggregationPhase(Connection connection) {
 
         timer.start();
@@ -597,6 +604,7 @@ public class RandomizedClusteringPhase {
      *
      * @param connection Connection object to the RDB
      */
+    @Deprecated
     private void computeNodesSetsWRDB(Connection connection) {
 
         PreparedStatement preparedSelect;
@@ -674,6 +682,74 @@ public class RandomizedClusteringPhase {
         } catch (SQLException e) {
 
             System.err.println("Couldn't set up source node table. Stacktrace follows:\n");
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     *  The role of this method is to compute sets of source and terminal
+     *  nodes via a connection to the RDB. This sets will be later used by the
+     *  algorithm.
+     *
+     * @param connection Connection object to the RDB
+     */
+    private void computeNodesSetsWRDB_V2(Connection connection) {
+
+        PreparedStatement preparedSelect;
+
+        try {
+
+            // Fetch the source nodes
+            System.out.println("Randomly fetching source nodes from db...");
+            preparedSelect = connection.prepareStatement(SQL_RANDOMLY_SELECT_SOURCE_NODES);
+            preparedSelect.setInt(1, this.lambdaOut);
+            ResultSet rs = preparedSelect.executeQuery();
+            System.out.println("Done.");
+
+            System.out.println("\nBuilding data structures...\n");
+
+            int mapCounter = 0;
+
+            while (rs.next()) {
+
+                String nodeString = rs.getString(1);
+
+                // Add the current source node to the map
+                this.sourceNodesSet.add(nodeString);
+                this.nodeColorMap.put(nodeString, Color.white);
+
+                mapCounter++;
+
+                if (mapCounter % 100000 == 0) {
+
+                    System.out.println("Selected " + mapCounter + " source nodes");
+                }
+            }
+
+            System.out.println("Selected " + mapCounter + " source nodes in total");
+
+            // Fetch the terminal nodes
+            preparedSelect = connection.prepareStatement(SQL_SELECT_TERMINAL_NODES);
+            preparedSelect.setInt(1, this.lambdaIn);
+            rs = preparedSelect.executeQuery();
+
+            mapCounter = 0;
+
+            while (rs.next()) {
+
+                String nodeString = rs.getString(1);
+
+                // Add the terminal node and sets its color to unvisited.
+                this.terminalNodesSet.add(nodeString);
+
+                mapCounter++;
+            }
+
+            System.out.println("Selected " + mapCounter + " terminal nodes in total");
+
+        } catch (SQLException e) {
+
+            System.err.println("Couldn't SELECT either source or terminal nodes. ");
             e.printStackTrace();
         }
     }
