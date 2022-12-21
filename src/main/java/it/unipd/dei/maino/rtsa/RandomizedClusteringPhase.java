@@ -50,7 +50,7 @@ public class RandomizedClusteringPhase {
     private int lambdaIn, lambdaOut;
 
     // Arraylist of source nodes (high out degree)
-    private ArrayList<String> sourceNodesList;
+    private Set<String> sourceNodesSet;
 
     // Set of the terminal modes (high in degree)
     private Set<String> terminalNodesSet;
@@ -78,6 +78,23 @@ public class RandomizedClusteringPhase {
     private static String SQL_GET_OUT_NEIGHBORHOOD =
             "SELECT subject_, predicate_, object_ FROM public.triple_store WHERE (subject_ = ?);";
 
+
+    private static String SQL_TRUNCATE_SOURCE_NODES_TABLE =
+            "TRUNCATE TABLE public.source_nodes;";
+
+    private static String SQL_INSERT_SOURCE_NODES =
+            "INSERT INTO public.source_nodes(node_name) SELECT node_name FROM public.node WHERE out_degree >= ?";
+
+    private String SQL_COLOR_SOURCES_ALL_WHITE =
+            "UPDATE public.source_nodes SET color = 0";
+
+    private static String SQL_GET_RANDOM_WHITE_SOURCE_NODE =
+            "SELECT node_name FROM public.source_nodes WHERE color = 0 ORDER BY RANDOM() LIMIT 1";
+
+    private static String SQL_UPDATE_SOURCE_COLOR_BLACK =
+            "UPDATE public.source_nodes SET color = 1 WHERE node_name = ?;";
+
+
     private Stopwatch timer;
 
     public enum Color {
@@ -93,7 +110,7 @@ public class RandomizedClusteringPhase {
 
         totBlackNodes = 0;
 
-        sourceNodesList = new ArrayList<String>();
+        sourceNodesSet = new HashSet<String>();
         terminalNodesSet = new HashSet<String>();
 
         nodeColorMap = new HashMap<String, Color>();
@@ -136,6 +153,23 @@ public class RandomizedClusteringPhase {
             SQL_GET_OUT_NEIGHBORHOOD =
                     "SELECT subject_, predicate_, object_ FROM " + this.schema + ".triple_store WHERE (subject_ = ?);";
 
+            // For the RDB version of the algorithm...
+            SQL_TRUNCATE_SOURCE_NODES_TABLE =
+                    "TRUNCATE TABLE " + this.schema + ".source_nodes;";
+
+            SQL_INSERT_SOURCE_NODES =
+                    "INSERT INTO " + this.schema + ".source_nodes(node_name) SELECT node_name FROM "
+                            + this.schema + ".node WHERE out_degree >= ?";
+
+            SQL_COLOR_SOURCES_ALL_WHITE =
+                    "UPDATE " + this.schema + ".source_nodes SET color = 0";
+
+            SQL_GET_RANDOM_WHITE_SOURCE_NODE =
+                    "SELECT node_name FROM " + this.schema + ".source_nodes WHERE color = 0 ORDER BY RANDOM() LIMIT 1";
+
+            SQL_UPDATE_SOURCE_COLOR_BLACK =
+                    "UPDATE " + this.schema + ".source_nodes SET color = 1 WHERE node_name = ?;";
+
 
         } catch (IOException e) {
 
@@ -165,10 +199,10 @@ public class RandomizedClusteringPhase {
                     this.password);
 
             // Get sets of terminal and source nodes according to the chosen parameters
-            this.computeNodesSets(connection);
+            this.computeNodesSetsWRDB(connection);
 
             // Create the clusters
-            this.randomizedAggregationPhase(connection);
+            this.randomizedAggregationPhaseWRDB(connection);
 
         } catch (SQLException e) {
 
@@ -194,6 +228,7 @@ public class RandomizedClusteringPhase {
      *
      * @param connection Connection object to the RDB
      */
+    @Deprecated
     private void randomizedAggregationPhase(Connection connection) {
 
         timer.start();
@@ -203,7 +238,7 @@ public class RandomizedClusteringPhase {
         if (!f.exists()) { f.mkdirs(); }
 
         // Iterator over the sources
-        for (String s : sourceNodesList) {
+        for (String s : sourceNodesSet) {
 
             if (Thread.interrupted()) {
                 ThreadState.setOffLine(false);
@@ -228,6 +263,57 @@ public class RandomizedClusteringPhase {
         }
     }
 
+    /**
+     * Core of the RTSA algorithm.
+     *
+     * Known bug: The first row of the resultSet is skipped because of next() call in the while loop.
+     *
+     * @param connection Connection object to the RDB
+     */
+    private void randomizedAggregationPhaseWRDB(Connection connection) {
+
+        timer.start();
+
+        File f = new File(this.clusterDirectoryPath);
+
+        if (!f.exists()) { f.mkdirs(); }
+
+        try (java.sql.Statement stmt =
+                     connection.createStatement()) {
+
+            ResultSet rs;
+
+            // TODO: We are missing the first row in the result set here.
+            // There still are available white source nodes
+            while (
+                    (rs = stmt.executeQuery(SQL_GET_RANDOM_WHITE_SOURCE_NODE))
+                            .next()) {
+
+                        if (Thread.interrupted()) {
+
+                            ThreadState.setOffLine(false);
+                            return;
+                        }
+
+                        // Get the source node as a string
+                        String s = rs.getString(1);
+
+                        // Skip empty nodes
+                        if (s.equals("")) {
+                            continue;
+                        }
+
+                        // Create the cluster beginning from this node source
+                        Model cluster = this.extendCluster(connection, s);
+
+                        this.printTheCluster(cluster);
+                    }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
 
     /**
      * Print out the clusters.
@@ -264,7 +350,6 @@ public class RandomizedClusteringPhase {
         BlazegraphUsefulMethods.printTheDamnGraph(cluster, path);
     }
 
-
     /**
      * This method is responsible of building the cluster
      * around the given source node.
@@ -295,8 +380,21 @@ public class RandomizedClusteringPhase {
             String s = sPair.getLeft();
 
             // Mark the node s as visited (thus the clustering algorithm will end)
-            nodeColorMap.put(s, Color.black);
-            totBlackNodes++;
+
+            PreparedStatement preparedSelect;
+
+            try {
+
+                preparedSelect = connection.prepareStatement(SQL_UPDATE_SOURCE_COLOR_BLACK);
+                preparedSelect.setString(1, source);
+                preparedSelect.executeUpdate();
+
+                totBlackNodes++;
+
+            } catch (SQLException e) {
+
+                e.printStackTrace();
+            }
 
             int radius = sPair.getRight() - 1;
 
@@ -311,7 +409,7 @@ public class RandomizedClusteringPhase {
                 Color objColor = nodeColorMap.get(obj.toString());
 
                 // If it is a simple accessory node
-                if (!sourceNodesList.contains(obj.toString())
+                if (!sourceNodesSet.contains(obj.toString())
                         && !terminalNodesSet.contains(obj.toString())) {
 
                     cluster.add(triple);
@@ -333,7 +431,7 @@ public class RandomizedClusteringPhase {
                             Value v = t.getObject();
 
                             if (v instanceof Literal
-                                    || (!sourceNodesList.contains(v.toString())
+                                    || (!sourceNodesSet.contains(v.toString())
                                         && !terminalNodesSet.contains(v.toString()) ) ) {
 
                                 cluster.add(t);
@@ -347,7 +445,7 @@ public class RandomizedClusteringPhase {
                         && (objColor == Color.white)
                         && connectivityList.contains(predicate.toString())) {
 
-                    if (sourceNodesList.contains(obj.toString())
+                    if (sourceNodesSet.contains(obj.toString())
                             && !terminalNodesSet.contains(obj.toString())) {
 
                         Pair<String, Integer> uPair =
@@ -427,6 +525,7 @@ public class RandomizedClusteringPhase {
      *
      * @param connection Connection object to the RDB
      */
+    @Deprecated
     private void computeNodesSets(Connection connection) {
 
         PreparedStatement preparedSelect;
@@ -445,7 +544,7 @@ public class RandomizedClusteringPhase {
                 String nodeString = rs.getString(1);
 
                 // Add the current source node to the map
-                this.sourceNodesList.add(nodeString);
+                this.sourceNodesSet.add(nodeString);
                 this.nodeColorMap.put(nodeString, Color.white);
 
                 mapCounter++;
@@ -460,7 +559,7 @@ public class RandomizedClusteringPhase {
 
             System.out.println("Shuffling collection for the RTSA...");
 
-            Collections.shuffle(sourceNodesList);
+            // Collections.shuffle(sourceNodesSet);
 
             System.out.println("Done.");
 
@@ -486,6 +585,95 @@ public class RandomizedClusteringPhase {
         } catch (SQLException e) {
 
             System.err.println("Couldn't SELECT either source or terminal nodes. ");
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     *  The previous computeNodesSets allows the poorest performance because
+     *  of the usage of the ArrayList data structure (needed for shuffling).
+     *
+     *  This method uses and rdb instead.
+     *
+     * @param connection Connection object to the RDB
+     */
+    private void computeNodesSetsWRDB(Connection connection) {
+
+        PreparedStatement preparedSelect;
+        java.sql.Statement stmt;
+
+        try {
+
+            System.out.println("Building table for source nodes... \n");
+
+            stmt = connection.createStatement();
+
+            // Delete previous garbage
+            System.out.println("Truncating source nodes table...");
+            stmt.executeUpdate(SQL_TRUNCATE_SOURCE_NODES_TABLE);
+            System.out.println("Truncated.");
+
+            // Insert the source nodes into the table
+            System.out.println("Inserting source nodes into table...");
+            preparedSelect = connection.prepareStatement(SQL_INSERT_SOURCE_NODES);
+            preparedSelect.setInt(1, this.lambdaOut);
+            preparedSelect.executeUpdate();
+            System.out.println("Done.");
+
+            // Set all nodes to white at the beginning
+            System.out.println("Setting all nodes to white...");
+            stmt.executeUpdate(SQL_COLOR_SOURCES_ALL_WHITE);
+            System.out.println("Done.");
+
+            // Fetch the source nodes
+            preparedSelect = connection.prepareStatement(SQL_SELECT_SOURCE_NODES);
+            preparedSelect.setInt(1, this.lambdaOut);
+            ResultSet rs = preparedSelect.executeQuery();
+
+            int mapCounter = 0;
+
+            System.out.println("\nBuilding data structures... \n");
+
+            while (rs.next()) {
+
+                String nodeString = rs.getString(1);
+
+                // Add the current source node to the map
+                this.sourceNodesSet.add(nodeString);
+
+                mapCounter++;
+
+                if (mapCounter % 100000 == 0) {
+
+                    System.out.println("Selected " + mapCounter + " source nodes");
+                }
+            }
+
+            System.out.println("Selected " + mapCounter + " source nodes in total");
+
+
+            // Fetch the terminal nodes
+            preparedSelect = connection.prepareStatement(SQL_SELECT_TERMINAL_NODES);
+            preparedSelect.setInt(1, this.lambdaIn);
+            rs = preparedSelect.executeQuery();
+
+            mapCounter = 0;
+
+            while (rs.next()) {
+
+                String nodeString = rs.getString(1);
+
+                // Add the terminal node and sets its color to unvisited.
+                this.terminalNodesSet.add(nodeString);
+
+                mapCounter++;
+            }
+
+            System.out.println("Selected " + mapCounter + " terminal nodes in total");
+
+        } catch (SQLException e) {
+
+            System.err.println("Couldn't set up source node table. Stacktrace follows:\n");
             e.printStackTrace();
         }
     }
